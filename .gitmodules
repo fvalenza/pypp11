@@ -1,0 +1,9 @@
+[submodule "external_libraries/pybind11"]
+	path = external_libraries/pybind11
+	url = https://github.com/pybind/pybind11
+[submodule "external_libraries/dummylib"]
+	path = external_libraries/dummylib
+	url = https://github.com/fvalenza/dummylib
+[submodule "external_libraries/catch"]
+	path = external_libraries/catch
+	url = https://github.com/catchorg/Catch2

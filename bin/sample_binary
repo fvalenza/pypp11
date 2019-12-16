@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+"""
+This script is a binary example of what can be done with the sequencing of multiple modules
+To chain multiple modules, just copy paste the tictoc part for each module
+
+"""
+
+import sys
+
+
+try:
+  from pypp11.common.mec.clp.clp import CLP
+  from pypp11.modules.simple_module import SimpleModule
+  from pypp11.common.mec.pypp11_logger import pypp11_logger as plog
+  from pypp11.common.mec.tictoc import tictoc as tictoc
+except Exception as e:
+  raise e
+  exit(1)
+
+
+#  =====================================
+
+verbosity = False
+
+
+def main(argv=None):
+
+  plog.info("Example binary -- Initializing")
+
+  try:
+    # Show conf files, inputs and outputs using CLP
+    clp            = CLP(argv)
+
+    #  Create instance of tictoc timer for L0M
+    t = tictoc.TicToc("L0M")
+
+    plog.info("Example binary -- Starting example module pypp11")
+
+    t.tic("Example binary -- example module pypp11")
+    # smod = SimpleModule(clp_input_dirs, clp_output_dir[0], global_conf, local_conf)
+    # smod.run()
+    t.toc(True)
+
+  except Exception as e:
+    plog.error("L0M failed: " + str(e))
+    raise
+
+  plog.info("Example binary -- Ending")
+
+  return 0
+
+
+if __name__ == "__main__":
+    main(sys.argv)

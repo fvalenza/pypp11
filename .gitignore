@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg
+*.eggs
+*.egg-info/
+MANIFEST
+
+# Documentation
+docs/build/
+
+# mypy
+.mypy_cache/
+
+# Unit test / coverage reports
+.tox/
+htmlcov/
+.coverage
+.coverage.*
+.*cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+coverage_html_report/
+
+# Misc
+*~
+.*.sw?
+
+# For IntelliJ IDEs (basically PyCharm)
+.idea/
+
+
+#  tests/ workspaces
+tests/bin/
+debug*
+#simulation/plotting/org.py
+#simulation/data/aux/grd_simu_init*
+#simulation/data/conf/GlobalConfiguration.xml
+#simulation/data/conf/OB_ProcessingConf.xml
+#simulation/data/conf/L0_ProcessingConf.xml
+#simulation/data/conf/L1_ProcessingConf.xml
+#simulation/data/conf/L2_ProcessingConf.xml
+#simulation/workspace
+*dask-worker-space*
+
+
+# tmp/test-dev folder is lightweight simulation/ folder. Exclude all tmp/ apart this one
+tmp/feature-tests
+# outputOBM to outputL2M are created during simulation, no need to commit them
+tmp/test-dev/outputGMD/*.nc
+tmp/test-dev/outputSIM/pl__raw_.nc
+tmp/test-dev/outputOBM
+tmp/test-dev/outputL0M
+tmp/test-dev/outputL1M
+tmp/test-dev/outputL2M
+
+# External libraries that must be compiled
+external_libraries/dummylib/lib/
+
