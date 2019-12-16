@@ -7,3 +7,6 @@
 [submodule "external_libraries/catch"]
 	path = external_libraries/catch
 	url = https://github.com/catchorg/Catch2
+[submodule "external_libraries/pybind11_examples"]
+	path = external_libraries/pybind11_examples
+	url = https://github.com/tdegeus/pybind11_examples
